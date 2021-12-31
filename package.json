@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon",
-    "test": "jest"
+    "dev": "nodemon --experimental-specifier-resolution=node",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "dependencies": {
     "cors": "^2.8.5",

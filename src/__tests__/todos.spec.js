@@ -1,7 +1,7 @@
-const request = require('supertest');
-const { validate } = require('uuid');
+import request from 'supertest';
+import { validate } from 'uuid';
 
-const app = require('../');
+import app from '../index';
 
 describe('Todos', () => {
   it("should be able to list all user's todo", async () => {
