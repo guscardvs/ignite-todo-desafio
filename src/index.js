@@ -61,7 +61,7 @@ app.post("/todos", VerifyUserMiddleware, (request, response) => {
   } = request;
   const { id, ...todo } = createObject({
     title,
-    deadline,
+    deadline: new Date(deadline),
     done: false,
     created_at: new Date(),
   });
@@ -80,7 +80,7 @@ app.put(
       todo: { id },
     } = request;
     todoObj.title = title;
-    todoObj.deadline = deadline;
+    todoObj.deadline = new Date(deadline);
     return response.json({ ...todoObj, id });
   }
 );
