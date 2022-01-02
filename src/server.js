@@ -1,3 +1,3 @@
-import app from './index'
+const app = require('./');
 
 app.listen(3333);

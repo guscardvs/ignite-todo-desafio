@@ -1,7 +1,6 @@
-import express from "express";
-import cors from "cors";
-
-import { v4 as uuid4 } from "uuid";
+const express = require('express');
+const cors = require('cors');
+const { v4: uuid4 } = require('uuid');
 
 const app = express();
 
@@ -109,4 +108,4 @@ app.delete(
   }
 );
 
-export default app;
+module.exports = app

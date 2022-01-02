@@ -1,7 +1,7 @@
-import request from 'supertest';
-import { validate } from 'uuid';
+const request = require('supertest');
+const {validate} = require('uuid');
 
-import app from '../index';
+const app = require('./../');
 
 describe('Users', () => {
   it('should be able to create a new user', async () => {
